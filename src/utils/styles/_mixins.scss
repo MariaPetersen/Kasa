@@ -1,0 +1,55 @@
+@mixin breakpoint-medium {
+    @media screen and (max-width:767px) {
+        @content
+    }
+};
+
+@mixin margin-desktop{
+    margin-right: 100px;
+    margin-left: 100px;
+}
+
+@mixin margin-mobile{
+    margin-right: 20px;
+    margin-left: 20px;
+}
+
+@mixin banner {
+    background-size: cover;
+    background-position: center;
+    border-radius: $bigRadius;
+    position: relative;
+    width: auto;
+    z-index: -1;
+    @include breakpoint-medium(){
+        @include margin-mobile()
+    }
+}
+
+@mixin banner-darkener{
+    &::before{
+        content: "";
+        position: absolute;
+        opacity: 0.3;
+        top: 0;
+        left: 0;
+        z-index: -1;
+        height: 100%;
+        background-color: black;
+        mix-blend-mode: darken;
+        width: 100%;
+        border-radius: $bigRadius;
+        @include breakpoint-medium{
+            justify-content: start;
+            height: 111px;
+            border-radius: $smallRadius;
+        }
+    }
+}
+
+@mixin card-color{
+    content: "";
+        top: 0;
+        left: 0;
+        background-color: $color-primary;
+}

@@ -1,0 +1,45 @@
+@import "./../../utils/styles/styles.scss";
+
+header{
+    display: flex;
+    @include margin-desktop;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 40px;
+    @include breakpoint-medium {
+        @include margin-mobile
+    }
+}
+
+.logo--header{
+    margin: 0px;
+    @include breakpoint-medium{
+        width: 145px;
+    }
+}
+
+.navBar{
+    font-weight: 500;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 24px;
+    @include breakpoint-medium {
+        font-size: 12px;
+    }
+}
+
+.navLink{
+    color: $color-primary;
+    text-decoration: none;
+    margin-left: 57px;
+    @include breakpoint-medium{
+        margin-left: 10px;
+    }
+    &:visited{
+        color: $color-primary;
+    }
+    &:active{
+        text-decoration: underline;
+    }
+
+}
+

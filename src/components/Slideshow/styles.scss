@@ -1,0 +1,32 @@
+@import "./../../utils/styles/styles.scss";
+
+.slideshow{
+    border-radius: $bigRadius;
+    height: 415px;
+    position: relative;
+    background-size: cover;
+    background-position: center;
+    margin-top: 20px;
+    @include breakpoint-medium{
+        height: 255px;
+    }
+    &__vector{
+        height: 80px;
+        width: 47px;
+        position: absolute;
+        top: 180px;
+        @include breakpoint-medium{
+            height: 20px;
+            width: 12px;
+            top: 115px;
+        }
+        &--right{
+            right: $slideshowVectorMargin;
+        }
+        &--left{
+            rotate: 180deg;
+            left: $slideshowVectorMargin;
+        }
+    }
+}
+

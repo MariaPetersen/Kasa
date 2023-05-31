@@ -1,0 +1,48 @@
+@import "./../../utils/styles/styles.scss";
+
+.card{
+    border-radius: $smallRadius;
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(0, 0, 0, 0.5) 100%);
+    display: flex;
+    margin-bottom: 50px;
+    margin-right: 30px;
+    margin-left: 30px;
+    text-decoration: none;
+    @include card-color;
+    &--desktop{
+        width: 340px;
+        height: 340px;
+    }
+    &--mobile{
+        width: 335px;
+        height: 255px;
+    }
+    &--container{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        margin-bottom: 43px;
+        margin-top: 43px;
+        padding-left: 20px;
+        padding-right: 20px;
+        padding-top: 56px;
+        background-color: $color-secondary;
+        border-radius: $bigRadius;
+        @include margin-desktop;
+        @include breakpoint-medium{
+            @include margin-mobile;
+            flex-direction: column;
+            align-items: center;
+            background-color: white;
+            padding: none;
+        }
+    }
+}
+
+.cardTitle{
+    color: white;
+    align-self: flex-end;
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-bottom: 20px;
+}

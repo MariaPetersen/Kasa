@@ -1,0 +1,30 @@
+@import "./../../utils/styles/styles.scss";
+
+footer {
+    display: flex;
+    width: 100%;
+    background-color: black;
+    padding: 0px;
+    align-items: center;
+    flex-direction: column;
+    height: 209px;
+    justify-content: space-between;
+    margin-top: 30px;
+}
+
+.credits {
+    color: white;
+    margin-bottom: 29px;
+    font-size: 24px;
+    line-height: 34.22px;
+    font-weight: 500;
+    font-family: $font;
+    @include breakpoint-medium {
+        font-size: 12px;
+    }
+}
+
+.logo--footer{
+    width: fit-content;
+    margin-top: 66px;
+}

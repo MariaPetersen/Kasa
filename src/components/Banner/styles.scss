@@ -1,0 +1,36 @@
+@import "./../../utils/styles/styles.scss"; 
+
+ .banner{
+    @include banner;
+    margin-top: 63px;
+    height: 223px;
+    @include margin-desktop;
+    @include banner-darkener;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    @include breakpoint-medium{
+        justify-content: start;
+        height: 111px;
+        border-radius: $smallRadius;
+    }
+    &--about{
+        @include breakpoint-medium{
+            height: 223px;
+        }
+    }
+
+ }
+
+ .bannerText{
+    color: white;
+    z-index: 1;
+    font-family: $font;
+    font-weight: 500;
+    font-size: 48px;
+    margin-left: 10px;
+    margin-right: 10px;
+    @include breakpoint-medium{
+        font-size: 24px;
+    }
+ }

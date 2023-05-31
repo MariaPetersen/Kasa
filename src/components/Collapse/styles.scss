@@ -1,0 +1,96 @@
+@import "./../../utils/styles/styles.scss";
+.collapse {
+    max-width: 1023px;
+    margin-top: 30px;
+    @include breakpoint-medium{
+        @include margin-mobile
+    }
+    &--about{
+        width: 100%;
+    }
+    &--housing{
+        margin-top: 0px;
+        width: 100%;
+        &--des{
+            margin-right: 15px;
+        }
+        &--eq{
+            margin-left: 15px;
+        }
+    }
+    &--text{
+        box-sizing: border-box;
+        position: relative;
+        min-height: 146px;
+        height: fit-content;
+        margin-top: 0px;
+        margin-bottom: 0px;
+        color: $color-primary;
+        padding-top: 34px;
+        padding-left: 18px;
+        padding-right: 27px;
+        font-size: 24px;
+        font-weight: 400;
+        @include breakpoint-medium{
+            min-height: 143px;
+            font-size: 12px;
+            padding-top: 23px;
+            @include margin-mobile;
+        }
+        &--housing{
+            min-height: 239px;
+            padding-right: 18px;
+            padding-left: 18px;
+        }
+        &::after{
+            content: "";
+            position: absolute;
+            top: 0px;
+            left: 0px; 
+            width: 100%;
+            min-height: 156px;
+            height: 105%;
+            background-color: $color-secondary;
+            z-index: -1;
+            margin-top: -5px;
+            border-radius: $smallRadius;
+        }
+    }
+}
+
+.collapse--title{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-direction: row;
+        background-color: $color-primary;
+        padding-left: 18px;
+        padding-right: 18px;
+        color: white;
+        border-radius: 5px;
+        z-index: 1;
+        @include breakpoint-medium{
+            height: 30px;
+            @include margin-mobile;
+        }
+    &--about{
+        height: 47px;
+        font-size: 24px;
+        @include breakpoint-medium{
+            height: 30px;
+        }
+    }
+    &--housing{
+        height: 52px;
+        border-radius: $smallRadius;
+        box-sizing: border-box;
+        margin: 0px;
+    }
+    } 
+
+.vector{
+    height: 14px;
+    &--open{
+        rotate: 180deg;
+    }
+}

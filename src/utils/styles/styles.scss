@@ -1,0 +1,17 @@
+@import "./mixins";
+@import "./variables";
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap');
+
+*{
+    font-family: $font;
+}
+
+body {
+    padding: 0px;
+    margin: 0px;
+}
+
+h3{
+    font-size: 18px;
+    font-weight: 500;
+}

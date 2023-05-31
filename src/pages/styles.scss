@@ -1,0 +1,150 @@
+@import "./../utils/styles/styles.scss";
+
+.error {
+    color: $color-primary;
+    font-weight: 700;
+    font-size: 288px;
+    margin-top: 90px;
+    margin-bottom: 66px;
+    @include breakpoint-medium{
+        font-size: 96px;
+        margin-top: 207px;
+
+    }
+    &__container{
+        text-align: center;
+    }
+    &__message{
+        color: $color-primary;
+        font-weight: 500;
+        font-size: 36px;
+        margin-bottom: 182px;
+        @include breakpoint-medium{
+            font-size: 18px;
+            margin-right: 58px;
+            margin-left: 58px;
+            margin-bottom: 133px;
+        }
+    }
+    &__link{
+        color: $color-primary;
+        font-weight: 500;
+        font-size: 18px;
+        @include breakpoint-medium{
+            font-size: 14px;
+            margin-left: 77px;
+            margin-right: 77px;
+            margin-bottom: 235px;
+        }
+    }
+}
+
+.home{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.about{
+    &__collapse{
+        @include margin-desktop;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+.housing{
+    @include margin-desktop;
+    @include breakpoint-medium{
+        @include margin-mobile;
+    }
+    &__header{
+        display: flex;
+        flex-direction: row;
+        justify-content:space-between;
+        @include breakpoint-medium{
+            flex-direction: column;
+        }
+    }
+    &__info{
+        &--title{
+            color: $color-primary;
+            font-weight: 500;
+            font-size: 36px;
+            @include breakpoint-medium{
+                font-size: 18px;
+            }
+        }
+        &--location{
+            color: $color-primary;
+            font-weight: 500;
+            font-size: 18px;
+            @include breakpoint-medium{
+                font-size: 14px;
+            }
+        }
+    }
+    &__tags{
+        display: flex;
+        list-style-type: none;
+        justify-content: start;
+        padding-left: 0px;
+        &--tag{
+            background-color: $color-primary;
+            color: white;
+            border-radius: $smallRadius;
+            padding-right: 5px;
+            padding-left: 5px;
+            min-width: 105px;
+            height: 25px;
+            font-size: 14px;
+            font-weight: 500px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-right: 10px;
+            @include breakpoint-medium{
+                min-width: 84px;
+            }
+        }
+    }
+    &__collapse{
+        display: flex;
+        justify-content: space-between;
+        &--equipments{
+            list-style-type: none;
+        }
+    }
+    &__host{
+        display: flex;
+        flex-direction: column-reverse;
+        width: 180px;
+        align-items: end;
+        justify-content: space-around;
+        margin-top: 30px;
+        margin-bottom: 30px;
+        &--id{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            &--name{
+                font-size: 18px;
+                font-weight: 500;
+                text-align: right;
+                margin-right: 5px;
+                color: $color-primary;
+            }
+            &--picture{
+                width: 64px;
+                height: 64px;
+                border-radius: 90px;
+            }
+        }
+        &--stars{
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+        }
+    }
+}
