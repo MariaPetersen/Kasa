@@ -9,6 +9,7 @@ function Card(props) {
     <Link
       to={props.homeId}
       className={isMobile ? "card card--mobile" : "card card--desktop"}
+      style={props.style}
     >
       <h3 className="cardTitle">{props.title}</h3>
     </Link>

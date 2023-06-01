@@ -13,9 +13,16 @@
         width: 100%;
         &--des{
             margin-right: 15px;
+            @include breakpoint-medium{
+                margin-left: 0px;
+            }
         }
         &--eq{
             margin-left: 15px;
+            @include breakpoint-medium{
+                margin-left: 0px;
+                margin-top: 25px;
+            }
         }
     }
     &--text{
@@ -35,7 +42,6 @@
             min-height: 143px;
             font-size: 12px;
             padding-top: 23px;
-            @include margin-mobile;
         }
         &--housing{
             min-height: 239px;
@@ -71,7 +77,7 @@
         z-index: 1;
         @include breakpoint-medium{
             height: 30px;
-            @include margin-mobile;
+            font-size: 13px;
         }
     &--about{
         height: 47px;

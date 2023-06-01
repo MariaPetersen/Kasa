@@ -37,7 +37,7 @@ header{
     &:visited{
         color: $color-primary;
     }
-    &:active{
+    &.active{
         text-decoration: underline;
     }
 

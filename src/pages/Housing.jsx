@@ -20,12 +20,22 @@ function Housing() {
     function getStars() {
       for (let i = 0; i < home.rating; i++) {
         stars.push(
-          <img src={starColored} alt="star colored" key={`starColored-${i}`} />
+          <img
+            src={starColored}
+            alt="star colored"
+            key={`starColored-${i}`}
+            className="housing__host--stars--star"
+          />
         )
       }
       for (let i = 0; i < 5 - home.rating; i++) {
         stars.push(
-          <img src={starEmpty} alt="star empty" key={`starEmpty-${i}`} />
+          <img
+            src={starEmpty}
+            alt="star empty"
+            key={`starEmpty-${i}`}
+            className="housing__host--stars--star"
+          />
         )
       }
     }
