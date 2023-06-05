@@ -43,12 +43,14 @@ function About() {
           collapseTitle="Service"
           collapseClass="collapse collapse--about"
           collapseTitleClass="collapse--title collapse--title--about"
+          collapseTextClass="collapse--text"
           collapseText={content.service}
         />
         <Collapse
           collapseTitle="Securité"
           collapseClass="collapse collapse--about"
           collapseTitleClass="collapse--title collapse--title--about"
+          collapseTextClass="collapse--text"
           collapseText={content.securite}
         />
       </div>
