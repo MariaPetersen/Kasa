@@ -20,7 +20,7 @@ function Home() {
           console.log(home.cover)
           return (
             <Card
-              homeId={`/housing/${home.id}`}
+              homeId={`housing/${home.id}`}
               key={home.id}
               title={home.title}
               style={{
