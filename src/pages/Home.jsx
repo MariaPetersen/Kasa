@@ -17,7 +17,6 @@ function Home() {
       />
       <div className="card--container">
         {homes.map((home) => {
-          console.log(home.cover)
           return (
             <Card
               homeId={`housing/${home.id}`}

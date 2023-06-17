@@ -1,6 +1,4 @@
 import vector from "./../../assets/icons/slideshowVector.png"
-import { useParams } from "react-router-dom"
-import homes from "./../../logements.json"
 import "./styles.scss"
 import { useState } from "react"
 

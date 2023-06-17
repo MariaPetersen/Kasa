@@ -41,7 +41,7 @@ function Housing() {
     }
     getStars()
     setStars(stars)
-  }, [])
+  }, [id])
 
   function getHome() {
     let index = homes.findIndex((home) => home.id === id)
