@@ -1,9 +1,16 @@
 import vector from "./../../assets/icons/slideshowVector.png"
 import "./styles.scss"
-import { useState } from "react"
+import { useEffect, useState } from "react"
 
 function Slideshow(pictures) {
   const [imageIndex, setImageIndex] = useState(0)
+  const [picturesLength, setPicturesLength] = useState(0)
+
+  useEffect(() => {
+    const picturesArray = Object.values(pictures)
+    console.log(picturesArray[0])
+    setPicturesLength(picturesArray[0].length)
+  }, [pictures])
 
   function handlePreviousClick() {
     if (imageIndex > 0) {
@@ -22,6 +29,7 @@ function Slideshow(pictures) {
   }
 
   const picturesArray = Object.values(pictures)
+  console.log(picturesLength)
 
   return (
     <div
@@ -33,15 +41,26 @@ function Slideshow(pictures) {
       <img
         src={vector}
         alt="Précédent"
-        className="slideshow__vector slideshow__vector--left"
+        className={
+          picturesLength === 1
+            ? "slideshow__vector--hidden"
+            : "slideshow__vector slideshow__vector--left"
+        }
         onClick={handlePreviousClick}
       />
       <img
         src={vector}
         alt="Suivant"
-        className="slideshow__vector slideshow__vector--right"
+        className={
+          picturesLength === 1
+            ? "slideshow__vector--hidden"
+            : "slideshow__vector slideshow__vector--right"
+        }
         onClick={handleNextClick}
       />
+      <span className="slideshow__pictureCount">
+        {imageIndex + 1}/{picturesLength}
+      </span>
     </div>
   )
 }

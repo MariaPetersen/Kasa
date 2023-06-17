@@ -27,6 +27,21 @@
             rotate: 180deg;
             left: $slideshowVectorMargin;
         }
+        &--hidden{
+            display: none;
+        }
+    }
+    &__pictureCount{
+        position: absolute;
+        bottom: 0px;
+        left: 50%;
+        color: white;
+        font-size: 18px;
+        font-weight: 500;
+        margin-bottom: 25px;
+        @include breakpoint-medium{
+            display: none;
+        }
     }
 }
 

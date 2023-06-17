@@ -10,21 +10,33 @@ function Collapse({
   collapseTextClass,
 }) {
   const [isOpen, setIsOpen] = useState(false)
+  const [isString, setIsString] = useState(false)
+
   function handleCollapseClick() {
     setIsOpen(!isOpen)
+    if (typeof collapseText === "string") {
+      setIsString(true)
+    } else {
+      setIsString(false)
+    }
   }
 
   return (
     <div className={collapseClass}>
       <div className={collapseTitleClass} onClick={handleCollapseClick}>
         <h3 className="collapse--heading">{collapseTitle}</h3>
-        {isOpen ? (
-          <img src={vector} alt="Show text" className="vector vector--open" />
-        ) : (
-          <img src={vector} alt="Hide text" className="vector vector--closed" />
-        )}
+        <img
+          src={vector}
+          alt={isOpen ? "Show text" : "Hide text"}
+          className={isOpen ? "vector vector--open" : "vector vector--closed"}
+        />
       </div>
-      {isOpen && <p className={collapseTextClass}>{collapseText}</p>}
+      {isOpen &&
+        (isString ? (
+          <p className={collapseTextClass}>{collapseText}</p>
+        ) : (
+          <ul className={collapseTextClass}>{collapseText}</ul>
+        ))}
     </div>
   )
 }
